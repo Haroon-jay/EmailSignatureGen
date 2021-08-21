@@ -42,7 +42,8 @@ const counterSlice = createSlice({
 		// templateA initialState end
 
 		// templateB initialState start
-
+        buttonText:"",
+		buttonLink:"",
 		TemplateBName: "Saurabh",
 		TemplateBCompany: "NETFORCELAB",
 		TemplateBPhonenumber: "212-931-0000",
@@ -81,6 +82,9 @@ const counterSlice = createSlice({
 
 		getGreenMessageText:(state,action)=>{
           state.greenMessageText=action.payload
+		},
+		getButtonLink:(state,action)=>{
+			state.buttonLink=action.payload
 		},
 		getGreenMessageImage:(state,action)=>{
          state.greenMessageImg=action.payload
@@ -191,6 +195,9 @@ const counterSlice = createSlice({
 		},
 
 		// users reducer action
+		getButtonText:(state,action)=>{
+          state.buttonText=action.payload
+		},
 
 		getData: (state, action) => {
 			state.user = action.payload;
@@ -251,6 +258,7 @@ export const {
     getDisclaimer,
 	getGreenMessageText,
 	getGreenMessageImage,
+	getButtonLink,
 	// template b values
 	getTemplateBName,
 	getTemplateBCompany,
@@ -262,7 +270,7 @@ export const {
 	getData,
 
 	// design tab
-
+	getButtonText,
 	getCounts,
 	getColors,
 	getFontsizeChange,

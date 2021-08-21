@@ -2,10 +2,19 @@ import React from "react";
 import Slider from "@material-ui/core/Slider";
 import { FaVideo } from "react-icons/fa";
 import { ImSkype } from "react-icons/im";
-import { SiGooglehangouts } from "react-icons/si";
 import { SiGooglehangoutsmeet } from "react-icons/si";
 import { GiBeveledStar } from "react-icons/gi";
+import { getButtonLink, getButtonText } from "../../../../redux/CounterSlice"
+import { useDispatch,useSelector } from "react-redux";
 const VideoConference = () => {
+	const dispatch=useDispatch()
+	const { buttonText }=useSelector(state=>state.counter)
+	const handleButtonText=(e)=>{
+     dispatch(getButtonText(e.target.value))
+	}
+	const handleButtonLink=(e)=>{
+		dispatch(getButtonLink(e.target.value))
+	}
 	return (
 		<>
 			<article>
@@ -17,7 +26,7 @@ const VideoConference = () => {
                         rounded-full py-2 px-3"
 						>
 							<FaVideo fontSize="18" />
-							Zoom
+							Zoom 
 						</button>
 						<button
 							class=" flex items-center gap-3 w-40 bg-white  text-gray-600 text-md border  border-gray-200 text-sm
@@ -50,6 +59,7 @@ const VideoConference = () => {
 						<div className="flex items-center gap-12 ">
 							<h1>Button text</h1>
 							<input
+							    onChange={handleButtonText}
 								class="appearance-none block w-48 bg-gray-100  text-black border  border-gray-200 text-sm
                         rounded-full py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 								id="grid-last-name"
@@ -60,6 +70,7 @@ const VideoConference = () => {
 						<div className="flex items-center gap-12 ">
 							<h1>Button URL</h1>
 							<input
+							onChange={handleButtonLink}
 								class="appearance-none block w-48 bg-gray-100  text-black border  border-gray-200 text-sm
                         rounded-full py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 								id="grid-last-name"

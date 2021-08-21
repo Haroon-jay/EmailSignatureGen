@@ -4,12 +4,15 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./DesignFonts.css";
 
+
 const TemplateA = () => {
+	const { buttonText }=useSelector(state=>state.counter)
 	const {
 		counter,
 		name,
 		company,
 		position,
+		buttonLink,
 		email,
 		phonenumber,
 		website,
@@ -266,6 +269,9 @@ const TemplateA = () => {
 				<div id="quote" style={{ color: "black" }}>
 					{quoteTitle}
 				</div>
+				{buttonText?
+				<a target="#blank" href={`${buttonLink}`} style={{color:"white",backgroundColor:"blue",marginLeft:13,marginBottom:5}} className="btn px-4">{buttonText} </a>
+				:""}<hr/>
 				<footer class="h-10 px-4 font-medium mt-5 text-xs">{disclaimer}</footer>
 				<div className="px-4 mt-5 flex"> <img src={greenMessageImg}/>
 				<span  className="" style={{marginLeft:6,color:"green"}}>{greenMessageText}</span></div>
