@@ -8,10 +8,10 @@ const Disclaimer = () => {
   const dispatch = useDispatch();
   const {disclaimer}=useSelector(state=>state.counter)
   const handleConfidentialityCheck=(e)=>{
-    dispatch(getDisclaimer("IMPORTANT:The contents of this email and any attachments are confidential.They are intended for named recipient(s) only.If you have recieved this email by mistake,please notify the sender immediately and do not disclose the content to anyone or make copies thereof."))
+    dispatch(getDisclaimer("IMPORTANT: The contents of this email and any attachments are confidential.They are intended for named recipient(s) only.If you have recieved this email by mistake,please notify the sender immediately and do not disclose the content to anyone or make copies thereof."))
   }
 const handleVirusesCheck=()=>{
-  dispatch(getDisclaimer("Warning:Although taking reasonable precautions to ensure no viruses or malicious software are present in this email,the sender cannot accept responsibility for any loss or damage arising from the use of this email or attachments"))
+  dispatch(getDisclaimer("Warning: Although taking reasonable precautions to ensure no viruses or malicious software are present in this email,the sender cannot accept responsibility for any loss or damage arising from the use of this email or attachments"))
 }
 const handleBindingCheck=()=>{
   dispatch(getDisclaimer("No employee or agent is authorized to conclude any binding agreement on behalf of the company with another party bu email without specific confirmation"))
@@ -34,7 +34,7 @@ const ownQuoteChange=(e)=>{
 
           <h1  className="text-lg font-semibold">
             Choose your disclaimer type:
-            {disclaimer}
+           
           </h1>
           <ul class="list-none grid gap-2 text-gray-600 ">
             <li className="flex items-center gap-2">

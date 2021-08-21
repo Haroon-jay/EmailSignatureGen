@@ -28,7 +28,9 @@ const TemplateA = () => {
 		quoteTitle,
 		signOffImage,
 		CompactMargins,
-		disclaimer
+		disclaimer,
+		greenMessageText,
+		greenMessageImg
 	} = useSelector(state => state.counter);
 
 	return (
@@ -264,8 +266,11 @@ const TemplateA = () => {
 				<div id="quote" style={{ color: "black" }}>
 					{quoteTitle}
 				</div>
-				<footer class="h-10 px-4 font-light text-xs">{disclaimer}</footer>
+				<footer class="h-10 px-4 font-medium mt-5 text-xs">{disclaimer}</footer>
+				<div className="px-4 flex"> <img src={greenMessageImg}/>
+				<span style={{marginLeft:6}}>{greenMessageText}</span></div>
 			</section>
+			
 		</div>
 	);
 };

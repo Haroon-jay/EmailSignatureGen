@@ -36,6 +36,8 @@ const counterSlice = createSlice({
 		twitterLinkC: "",
 		signOffImage: { name: "kind_regards", image: KindRegards },
 		Templates: <TemplateA />,
+		greenMessageText:"",
+		greenMessageImg:"",
 
 		// templateA initialState end
 
@@ -74,8 +76,14 @@ const counterSlice = createSlice({
 			state.name = action.payload;
 		},
 		getDisclaimer:(state,action)=>{
-			
           state.disclaimer=action.payload
+		},
+
+		getGreenMessageText:(state,action)=>{
+          state.greenMessageText=action.payload
+		},
+		getGreenMessageImage:(state,action)=>{
+         state.greenMessageImg=action.payload
 		},
 		getCompany: (state, action) => {
 			state.company = action.payload;
@@ -241,6 +249,8 @@ export const {
 	getTemplateG,
 	getTemplateH,
     getDisclaimer,
+	getGreenMessageText,
+	getGreenMessageImage,
 	// template b values
 	getTemplateBName,
 	getTemplateBCompany,
