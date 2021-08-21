@@ -23,6 +23,7 @@ const TemplateB = () => {
     colors,
     spacings,
     CompactMargins,
+    disclaimer
 
   } = useSelector((state) => state.counter);
   const signOffImage = useSelector((state) => state.counter.signOffImage.image);
@@ -232,7 +233,11 @@ const TemplateB = () => {
             </a>
           </div>
         </div>
+        <small>
+
+      </small>
       </section>
+      
     </div>
   );
 };

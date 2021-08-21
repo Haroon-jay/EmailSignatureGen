@@ -30,7 +30,7 @@
 		"youtube-thumbnail": "^1.3.0"
 	},
 	"scripts": {
-		"start": "craco start",
+		"start": "set PORT=3424 && craco start",
 		"build": "craco build",
 		"test": "craco test",
 		"eject": "react-scripts eject"

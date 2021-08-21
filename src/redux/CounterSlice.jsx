@@ -16,6 +16,7 @@ const counterSlice = createSlice({
 	name: "users",
 	initialState: {
 		// templateA initialState start
+		disclaimer:"",
 		name: "",
 		company: "",
 		position: " ",
@@ -71,6 +72,10 @@ const counterSlice = createSlice({
 
 		getName: (state, action) => {
 			state.name = action.payload;
+		},
+		getDisclaimer:(state,action)=>{
+			
+          state.disclaimer=action.payload
 		},
 		getCompany: (state, action) => {
 			state.company = action.payload;
@@ -235,7 +240,7 @@ export const {
 	getTemplateF,
 	getTemplateG,
 	getTemplateH,
-
+    getDisclaimer,
 	// template b values
 	getTemplateBName,
 	getTemplateBCompany,
