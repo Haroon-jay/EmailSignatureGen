@@ -267,8 +267,8 @@ const TemplateA = () => {
 					{quoteTitle}
 				</div>
 				<footer class="h-10 px-4 font-medium mt-5 text-xs">{disclaimer}</footer>
-				<div className="px-4 flex"> <img src={greenMessageImg}/>
-				<span style={{marginLeft:6}}>{greenMessageText}</span></div>
+				<div className="px-4 mt-5 flex"> <img src={greenMessageImg}/>
+				<span  className="" style={{marginLeft:6,color:"green"}}>{greenMessageText}</span></div>
 			</section>
 			
 		</div>

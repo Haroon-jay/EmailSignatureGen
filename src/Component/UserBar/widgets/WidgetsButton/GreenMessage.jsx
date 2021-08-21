@@ -31,15 +31,16 @@ const GreenMessage = () => {
 								placeholder="Regular input"  onChange={handleTextSelect}
 							>
 								<option>Select one</option>
-								<option>Environmental responsibility</option>
-								<option>Environmental responsibility short</option>
-								<option>Do you really need ...?</option>
-								<option>Printing kills trees</option>
-								<option>Don't print this</option>
+								<option>Please Consider your Environmental responsibility. Before printing this e-mail message,ask yourself whether you need a copy</option>
+								<option>Please Consider the Environment before printing this email
+								</option>
+								<option>Do you really need to print this email?</option>
+								<option>Printing e-mail kills trees. Print is Murder!</option>
+								<option>Don't print this,OK?</option>
 								<option>Printing emails is SO 2009</option>
 								<option>Save a tree - kill a beaver</option>
-								<option>Be carbon free</option>
-								<option>Save ink cartridges</option>
+								<option>Be like me,Be carbon free - Dont print this and save a free</option>
+								<option>Save ink cartridges from going extinct! Dont print this email </option>
 							</select>
 							<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
 								<svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
