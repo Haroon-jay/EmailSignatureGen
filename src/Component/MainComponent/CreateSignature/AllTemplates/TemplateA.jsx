@@ -264,7 +264,7 @@ const TemplateA = () => {
 				<div id="quote" style={{ color: "black" }}>
 					{quoteTitle}
 				</div>
-				<footer class="h-10 bg-blue-500 font-light text-xs">{disclaimer}</footer>
+				<footer class="h-10 px-4 font-light text-xs">{disclaimer}</footer>
 			</section>
 		</div>
 	);
